@@ -13,10 +13,11 @@ Rails.application.routes.draw do
   post "login", to: "sessions#create"
   delete "login", to: "sessions#destroy"
 
-  get "posts/new", to: "post#new"
-  post "posts", to: "post#create"
-  get "posts/id", to: "post#show"
-  delete "posts/id", to: "post#destroy"
+  get "posts/new", to: "posts#new"
+  get "posts/index", to: "posts#index"
+  post "posts", to: "posts#create"
+  get "posts/show", to: "posts#show"
+  delete "posts/id", to: "posts#destroy"
 
   post "post/:id/comment", to: "post#create", as: "create"
   delete "post/:id/comment", to: "post#destroy"
