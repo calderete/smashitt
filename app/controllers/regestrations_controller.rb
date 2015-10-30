@@ -2,7 +2,7 @@ class RegestrationsController < ApplicationController
 
 	def new
 		@user = User.new
-		render :new_user
+		render :new
 	end
 
 	def create
