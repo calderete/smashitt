@@ -6,8 +6,8 @@ class RegestrationsController < ApplicationController
 	end
 
 	def create
-		@user = User.new(name: params[:name], 
-		                email: params[:email], 
+		#binding.pry
+		@user = User.new(name: params[:name],  
 		                password: params[:password])
 		if @user.save
 			redirect_to post_show
