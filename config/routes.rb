@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  root to: "index#show"
+  root to: "posts#index"
 
 #regestrations routes
   get "signup", to: "regestrations#new"
@@ -13,12 +13,12 @@ Rails.application.routes.draw do
   post "login", to: "sessions#create"
   delete "login", to: "sessions#destroy"
 
-  get "post/new", to: "post#new"
-  post "post", to: "post#create"
-  get "post/id", to: "post#show"
-  delete "post/id", to: "post#destroy"
+  get "posts/new", to: "post#new"
+  post "posts", to: "post#create"
+  get "posts/id", to: "post#show"
+  delete "posts/id", to: "post#destroy"
 
-  post "post/:id/comment", to: "post#create"
+  post "post/:id/comment", to: "post#create", as: "create"
   delete "post/:id/comment", to: "post#destroy"
 
 
