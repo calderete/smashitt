@@ -10,7 +10,7 @@ class RegestrationsController < ApplicationController
 		@user = User.new(name: params[:name],  
 		                password: params[:password])
 		if @user.save
-			redirect_to post_show
+			redirect_to posts_show_path
 		else
 			render :smash_no_like
 		end
