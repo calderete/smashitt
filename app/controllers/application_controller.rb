@@ -12,8 +12,8 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
   	unless current_user
-  		redirect_to :bad_user
-  	end
+  	# 	redirect_to :bad_user
+  	 end
   end
 end
 
