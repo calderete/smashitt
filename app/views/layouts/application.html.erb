@@ -14,7 +14,7 @@
       <h2><div class="notice"><%= flash[:notice] %></div></h2>
   <% end %>
   <% if current_user %>
-      <h3>Smashitt, where you come to break stuff, <%= current_user.email %>!</h3>
+      <h3>Smashitt, where you come to break stuff, <%= current_user.name %>!</h3>
       <%= link_to "Logout", login_path, method: "delete" %>
   <% else %>
       <%= link_to "Login", login_path %>
