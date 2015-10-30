@@ -5,11 +5,19 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		user = User.find_by(name: params[:name], email: params[:email])
+		#binding.pry
+		user = User.find_by(name: params[:name])
+		if user.password == params[:password]
+			session[:user_id] = user.id
+			redirect_to posts_path
+		else
+			redirect_to login_path
+		end
+
 	end
 		
 	def destroy
 		session[:user_id] = nil
-		redirect_to post_path
+		redirect_to posts_show_path
 	end
 end
