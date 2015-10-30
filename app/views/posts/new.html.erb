@@ -1,0 +1,7 @@
+<h1>New Post</h1>
+
+<%= form_tag(posts_path) do %>
+    <%= render partial: "form" %>
+<% end %>
+
+<%= link_to "Don't smashitt!", :back %>
