@@ -2,6 +2,9 @@
 
 <ul class="posts">
   <% @posts.each do |post| %>
+      <li class="post_info">
+        <b>Smashed by:</b> <%= post.user.name %> <b>Smashed on:</b> <%= time_ago_in_words(post.created_at) %> ago
+      </li>
       <li class="post">
         <%= post.title %>
       <%= link_to post.url %>
