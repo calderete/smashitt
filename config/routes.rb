@@ -14,9 +14,9 @@ Rails.application.routes.draw do
   delete "login", to: "sessions#destroy"
 
   get "posts/new", to: "posts#new"
-  get "posts/index", to: "posts#index"
+  get "posts/index", to: "posts#index", as: "posts_show"
   post "posts", to: "posts#create"
-  get "posts/show/:id", to: "posts#show"
+  get "posts/show/:id", to: "posts#show", as: "post_show"
   delete "posts/id", to: "posts#destroy"
 
   post "post/:id/comment", to: "post#create", as: "create"

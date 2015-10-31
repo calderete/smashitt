@@ -8,9 +8,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    # binding.pry
+  
     post = current_user.posts.create(title: params[:title],
-                                     content: params[:content])#, check routes after morning migration
+                                     url: params[:url])#, check routes after morning migration
                                      #this is where we need to add the url method ^
                                      # tag_names: params[:tags],
                                      #written_at: DateTime.now)

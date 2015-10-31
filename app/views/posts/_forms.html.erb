@@ -4,8 +4,9 @@
 </div>
 
 <div class="post-field">
+
   <%= label_tag "Body: " %>
-  <%= text_area_tag :content, @post.content %>
+  <%= url_field_tag :url, @post.url %>
 </div>
 
 <%= submit_tag "Publish!" %>
