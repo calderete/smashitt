@@ -5,11 +5,18 @@
   <!--the above format is dependant upon the updating of the url method-->
 </div>
 
+<h2> Smashing comments </h2>
+<%= @post.comments.each do |comment| %>
+<%= simple_format(comment.content) %>
+
+<% end %>
+
+
 
 
 <%= form_tag(comments_create_path(@post)) do %>
  <%= label_tag "Comment: " %>
- <%= text_area_tag :comment, nil, cols: 20, rows:10 %>
+ <%= text_area_tag :comment, nil, cols: 30, rows:5 %>
  <%= submit_tag "Smash this post" %>
 <% end %>
 
