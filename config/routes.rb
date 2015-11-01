@@ -19,8 +19,9 @@ Rails.application.routes.draw do
   get "posts/show/:id", to: "posts#show", as: "post_show"
   delete "posts/id", to: "posts#destroy"
 
-  post "post/:id/comment", to: "post#create", as: "create"
-  delete "post/:id/comment", to: "post#destroy"
+  get "post/:id/comments", to: "comments#show", as: "comments_show"
+  post "post/:id/comments", to: "comments#create", as: "comments_create"
+  delete "post/:id/comments", to: "comments#destroy", as: "comments_destroy"
 
 
 
