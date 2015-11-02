@@ -7,9 +7,4 @@ class CommentsController < ApplicationController
     redirect_to post_show_path(@post)
   end
 
-  def show
-  end
 
-  def destsroy
-  end
-end
