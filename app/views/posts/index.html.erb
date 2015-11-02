@@ -7,7 +7,7 @@
       </li>
       <li class="post">
         <%= post.title %>
-      <%= link_to "#{post.url}" %><
+      <a href="<%= post.url %>"></a>
       <%= link_to "See Smashing Comments", post_show_path(post) %>
       </li>
   <% end %>
