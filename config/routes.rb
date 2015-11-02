@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  root to: "posts#index"
+  root to: "welcome#index"
 
 #regestrations routes
   get "signup", to: "regestrations#new"
