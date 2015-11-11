@@ -42,6 +42,7 @@ group :development, :test do
   gem 'byebug'
   gem 'pry'
   gem 'sqlite3'
+  gem 'pg'
 end
 
 group :development do
