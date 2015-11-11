@@ -14,7 +14,7 @@ class PostsController < ApplicationController
                                      #this is where we need to add the url method ^
                                      # tag_names: params[:tags],
                                      #written_at: DateTime.now)
-    redirect_to posts_show_path(post)
+    redirect_to post_show_path(post)
   end
 
 
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
     else
       flash[:notice] = "This is not for you to touch."
     end
-    redirect_to posts_path
+    redirect_to posts_show_path
   end
 end
 
