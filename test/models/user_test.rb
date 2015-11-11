@@ -11,4 +11,9 @@ class UserTest < ActiveSupport::TestCase
   	assert user.name == "Charlie"
 
   end
+
+  test "user has posts" do
+  	user = users(:user_one)
+  	assert user.posts.count != 0
+  end
 end
