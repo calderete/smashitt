@@ -6,7 +6,8 @@ class UserTest < ActiveSupport::TestCase
   #   assert true
   # end
   def test_user
-  	user = User.new
+  	user = User.new(user_name: "Charlie", password: "12aswqh",
+  					name: "Charlie")
   	assert user.valid?
 
   end
