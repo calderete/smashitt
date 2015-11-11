@@ -5,10 +5,10 @@ class UserTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
-  def test_user
-  	user = User.new(user_name: "Charlie", password: "12aswqh",
+  def test_user_name
+  	user = User.create(user_name: "Charlie", password: "12aswqh",
   					name: "Charlie")
-  	assert user.valid?
+  	assert user.name == "Charlie"
 
   end
 end
