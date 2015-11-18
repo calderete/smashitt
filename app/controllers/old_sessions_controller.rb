@@ -1,3 +1,10 @@
+
+#This is what the old Sessions controller looked liked
+
+
+
+
+
 class SessionsController < ApplicationController
 
 	def new
