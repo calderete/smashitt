@@ -3,7 +3,7 @@
 <ul class="posts">
   <% @posts.each do |post| %>
       <li class="post_info">
-        <b>Smashed by:</b> <%= post.user.name %> <b>Smashed on:</b> <%= time_ago_in_words(post.created_at) %> ago
+        <b>Smashed by:</b> <%= post.user.email %><br /> <b>Smashed on:</b> <%= time_ago_in_words(post.created_at) %> ago
       </li>
       <li class="post">
         <%= post.title %>
@@ -16,4 +16,6 @@
     <%= paginate @posts %>
     <%= link_to "Add a new Post!", posts_new_path %>
   </div>
+  <%= button_to "logout", (destroy_user_session_path), 
+method: :delete %>
 </ul>

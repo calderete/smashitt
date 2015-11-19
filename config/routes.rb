@@ -1,22 +1,32 @@
 Rails.application.routes.draw do
 
-    devise_for :users, controllers: {
-      sessions: 'user/sessions'
-    }
+devise_for :users
 
+#  sessions: "users/sessions" 
+#}
+
+#  devise_for :users, path: "auth", path_names: { 
+#    sign_in: 'login',
+#    sign_out: 'logout',
+#    password: 'secret',
+#    confirmation: 'verification',
+#    unlock: 'unblock',
+#    registration: 'register',
+#    sign_up: 'cmon_let_me_in'
+#           }
   
 
   root to: "welcome#index"
 
 #regestrations routes
-  get "signup", to: "regestrations#new"
-  post "signup", to: "regestrations#create"
+#  get "signup", to: "regestrations#new"
+#  post "signup", to: "regestrations#create"
 
 # Session routes
 
-  get "login", to: "sessions#new"
-  post "login", to: "sessions#create"
-  delete "login", to: "sessions#destroy"
+#  get "login", to: "sessions#new"
+#  post "login", to: "sessions#create"
+#  delete "login", to: "sessions#destroy"
 
   get "posts/new", to: "posts#new"
   get "posts/index", to: "posts#index", as: "posts_show"
