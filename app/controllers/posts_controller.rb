@@ -8,7 +8,6 @@ class PostsController < ApplicationController
   end
 
   def create
-  
     post = current_user.posts.create(title: params[:title],
                                      url: params[:url])#, check routes after morning migration
                                      #this is where we need to add the url method ^
