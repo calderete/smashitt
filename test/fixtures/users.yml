@@ -8,5 +8,6 @@ user_one:
   user_name: Charlie
   password: 12345678
   name: Charlie
+  email: codprestige@gmail.com
  
 #  column: value
