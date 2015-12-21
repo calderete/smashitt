@@ -16,17 +16,17 @@ devise_for :users
 #           }
   
 
-  root to: "welcome#index"
+  root to: "regestrations#new"
 
 #regestrations routes
-#  get "signup", to: "regestrations#new"
-#  post "signup", to: "regestrations#create"
+  get "signup", to: "regestrations#new"
+  post "signup", to: "regestrations#create"
 
 # Session routes
 
-#  get "login", to: "sessions#new"
-#  post "login", to: "sessions#create"
-#  delete "login", to: "sessions#destroy"
+  get "login", to: "sessions#new"
+  post "login", to: "sessions#create"
+  delete "login", to: "sessions#destroy"
 
   get "posts/new", to: "posts#new"
   get "posts/index", to: "posts#index", as: "posts_show"
